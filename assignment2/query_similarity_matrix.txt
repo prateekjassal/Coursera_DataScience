@@ -1,0 +1,2 @@
+create view D as select docid row, term column, count value from frequency order by docid;
+select sum(D.value*E.value) from D, D E where D.column = E.column and E.row='10080_txt_crude' and D.row='17035_txt_earn';

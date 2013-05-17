@@ -1,0 +1,1 @@
+select value from (select A.row_num, B.col_num, sum(a.value*b.value) value from a, b where a.col_num = b.row_num group by A.row_num, B.col_num) where row_num=2 and col_num=3;

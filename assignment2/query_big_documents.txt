@@ -1,0 +1,1 @@
+select count(*) from (select sum(count) from frequency where docid in (select distinct docid from frequency)  group by docid having sum(count)>300);

@@ -1,0 +1,1 @@
+select max(similarity) from (select sum(D.value*E.value) similarity,E.row, E.column,D.row,D.column from D, D E where D.column = E.column and D.row='q' group by D.row,E.row order by D.value*E.value);
